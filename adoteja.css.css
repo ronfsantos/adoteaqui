@@ -1,45 +1,87 @@
-     .adotei {
-         background-color: yellow;
-         border: 10px;
-         color: blue;
-     }
-     
-     p {
-         flex-grow: 2;
-         align-items: center;
-         display: inline;
-         float: left;
-         margin: 23px;
-         margin-top: 23px;
-         border-radius: 4px;
-         padding: 5px;
-         width: 70px;
-         padding-left: 40px;
-         background-color: cadetblue;
-     }
-     
-     .adote {
-         display: flex;
-         margin: 0px;
-         font-family: 'Times New Roman', Times, serif;
-         font-size: 25px;
-         background-color: yellow;
-         padding-right: 708px;
-     }
-     
-     header {
-         display: flex;
-         width: 100%;
-         height: 15%;
-         justify-content: space-between;
-     }
-     
-     .adote:hover {
-         background: blue;
-         color: yellow;
-         font-size: 40px;
-     }
-     
-     .adote::first-letter {
-         color: green;
-     }
+body {
+    margin: 0;
+    padding: 0;
+    background-color: tomato;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    height: 120px;
+    background-color: blueviolet;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    width: 990px;
+}
+
+.logo:hover {
+    color: red;
+    font-size: larger;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+}
+
+nav ul,
+nav li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul {
+    display: flex;
+}
+
+nav a {
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: black;
+}
+
+nav .active a,
+nav a:hover {
+    background-color: blue;
+    color: white;
+    transition: 3s;
+}
+
+#geral {
+    display: flex;
+    justify-content: center;
+}
+
+section {
+    display: flex;
+}
+
+section .adote_ja img {
+    width: 24%;
+    height: 24%;
+    object-fit: cover;
+}
+
+.box {
+    background-color: blueviolet;
+    width: 100%;
+    height: 100%;
+}
+
+@media (max-width:750px) {
+    .adote_ja {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    section .adote_ja img {
+        width: 90%;
+    }
+}
